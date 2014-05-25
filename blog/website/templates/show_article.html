@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>{{ article.title }}</h3>
+<p>{{ article.text }}</p>
+
+    {% for comment in comments %}
+        {{ comment.text }}<br>
+        {{ comment.pub_date }}
+        <hr>
+    {% endfor %}
+{% endblock %}
